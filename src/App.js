@@ -12,3 +12,5 @@ function App() {
 }
 
 export default App;
+
+//Data Binding é linkar o valor com uma variável
