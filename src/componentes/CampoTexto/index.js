@@ -11,19 +11,20 @@ const CampoTexto = (props) => {
     // Dessa forma você separa os componentes da array de retorno.
 
 
-    const [valor, setValor] = useState('')
+   // const [valor, setValor] = useState('')
 
     const aoDigitado = (evento) => {
-        setValor(evento.target.value)
-        console.log(valor)
+        props.aoAlterado(evento.target.value)
+        //setValor(evento.target.value)
+        //console.log(valor)
     }
 
     return (
         <div className="campo-texto">
             <label>
                 {props.label}
-                </label>
-            <input value={valor} onChange={aoDigitado} required={props.obrigatorio} placeholder={placeholderModificada} />
+            </label>
+            <input value={props.valor} onChange={aoDigitado} required={props.obrigatorio} placeholder={placeholderModificada} />
         </div>
     )
 }
